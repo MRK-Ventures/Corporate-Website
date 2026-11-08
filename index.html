@@ -1029,7 +1029,7 @@
 
       // 1. Capture all form data
       const name = document.getElementById('formName').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
+      const email = document.getElementById('formEmail').value.trim().toLowerCase();
       const phone = document.getElementById('formPhone').value.trim();
       const title = document.getElementById('formTitle').value.trim() || 'N/A';
       const company = document.getElementById('formCompany').value.trim() || 'N/A';
@@ -1037,22 +1037,22 @@
       const message = document.getElementById('formMessage').value.trim();
 
       // Email Validation
-      const emailInput = document.getElementById("formEmail");
-      const emailValue = emailInput ? emailInput.value.trim().toLowerCase() : "";
-      if (!EMAIL_REGEX.test(emailValue)) {
+      if (!EMAIL_REGEX.test(email)) {
         e.preventDefault();
         alert("Please enter a valid email address (e.g. name@domain.com).");
-        emailInput.focus();
+        btnSubmit.disabled = false;
+        submitBtnText.textContent = 'Submit Formal Inquiry';
+        document.getElementById("formEmail").focus();
         return;
       }
 
       // Mobile number validation (10 digits, Indian format)
-      const mobileInput = document.getElementById("phone");
-      const mobileValue = mobileInput ? mobileInput.value.trim() : "";
-      if (!MOBILE_REGEX.test(mobileValue)) {
+      if (!MOBILE_REGEX.test(phone)) {
         e.preventDefault();
         alert("Please enter a valid 10-digit Indian mobile number starting with Carrier 6, 7, 8, or 9.");
-        mobileInput.focus();
+        btnSubmit.disabled = false;
+        submitBtnText.textContent = 'Submit Formal Inquiry';
+        document.getElementById("phone").focus();
         return;
       }
 
@@ -1103,7 +1103,6 @@ ${message}`;
       } catch (error) {
         console.error("Email API failed, continuing to WhatsApp:", error);
       } finally {
-        // Regardless of email success/failure, redirect the user to WhatsApp
         setTimeout(() => {
           window.open(whatsappUrl, '_blank');
 
