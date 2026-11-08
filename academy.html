@@ -1,702 +1,709 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MRK Executive Academy | Elite Business & Science Education</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MRK Executive Academy offers Elite Business & Science Education, specialized IT Mastery coaching, and pre-university science tracks for high-performers." />
+    <title>MRK Executive Academy | Elite Business & Science Education</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              black: '#000000',
-              surface: '#0a0a0a',
-              card: '#111111',
-              cardHover: '#1a1a20',
-              border: '#24211a',
-              borderGold: 'rgba(215, 166, 76, 0.35)',
-              gold: {
-                light: '#FFE9AD',
-                DEFAULT: '#D7A64C',
-                rich: '#BE8C34',
-                dark: '#8B5F19',
-                deep: '#4E350C'
-              }
-            }
-          },
-          fontFamily: {
-            serif: ['Montserrat', 'serif'],
-            sans: ['Montserrat', 'sans-serif'],
-            tagline: ['Montserrat', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-gradient': 'linear-gradient(135deg, #FFF0C9 0%, #E2BE66 35%, #B78A28 70%, #906B1B 100%)',
-            'gold-metallic': 'linear-gradient(90deg, #CE9E36 0%, #FFF3D1 45%, #C2932C 75%, #8B6517 100%)',
-            'gold-radial': 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(7, 7, 8, 0) 70%)',
-            'dark-gradient': 'linear-gradient(180deg, rgba(15,15,18,0.7) 0%, rgba(7,7,8,0.95) 100%)'
-          },
-          boxShadow: {
-            'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.25)',
-            'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.35)',
-            'card-subtle': '0 10px 30px -10px rgba(0, 0, 0, 0.8)',
-          }
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: "#000000",
+                            surface: "#0a0a0a",
+                            card: "#111111",
+                            cardHover: "#1a1a20",
+                            border: "#24211a",
+                            borderGold: "rgba(215, 166, 76, 0.35)",
+                            gold: {
+                                light: "#FFE9AD",
+                                DEFAULT: "#D7A64C",
+                                rich: "#BE8C34",
+                                dark: "#8B5F19",
+                                deep: "#4E350C",
+                            },
+                        },
+                    },
+                    fontFamily: {
+                        serif: ["Montserrat", "serif"],
+                        sans: ["Montserrat", "sans-serif"],
+                        tagline: ["Montserrat", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        "gold-gradient": "linear-gradient(135deg, #FFF0C9 0%, #E2BE66 35%, #B78A28 70%, #906B1B 100%)",
+                        "gold-metallic": "linear-gradient(90deg, #CE9E36 0%, #FFF3D1 45%, #C2932C 75%, #8B6517 100%)",
+                        "gold-radial": "radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(7, 7, 8, 0) 70%)",
+                        "dark-gradient": "linear-gradient(180deg, rgba(15,15,18,0.7) 0%, rgba(7,7,8,0.95) 100%)",
+                    },
+                    boxShadow: {
+                        "gold-glow": "0 0 35px -5px rgba(212, 175, 55, 0.25)",
+                        "gold-glow-lg": "0 0 60px -10px rgba(212, 175, 55, 0.35)",
+                        "card-subtle": "0 10px 30px -10px rgba(0, 0, 0, 0.8)",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Custom Gold Text & Border Utilities */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #fff1cd 0%, #deb95c 30%, #c49b31 70%, #8e6819 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-      }
-    }
-  </script>
 
-  <style>
-    /* Custom Gold Text & Border Utilities */
-    .text-gold-gradient {
-      background: linear-gradient(135deg, #FFF1CD 0%, #DEB95C 30%, #C49B31 70%, #8E6819 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+        .brand-tagline-text {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.38em;
+            color: #d9ae5e;
+        }
 
-    .brand-tagline-text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      letter-spacing: 0.38em;
-      color: #D9AE5E;
-    }
+        .border-gold-subtle {
+            border: 1px solid rgba(212, 175, 55, 0.22);
+        }
 
-    .border-gold-subtle {
-      border: 1px solid rgba(212, 175, 55, 0.22);
-    }
+        .border-gold-subtle:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+        }
 
-    .border-gold-subtle:hover {
-      border-color: rgba(212, 175, 55, 0.6);
-    }
+        /* Ambient Subtle Grid */
+        .bg-luxury-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+        }
 
-    /* Ambient Subtle Grid */
-    .bg-luxury-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(212, 175, 55, 0.035) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
-    }
+        /* Custom Glassmorphism */
+        .glass-nav {
+            background: rgba(7, 7, 8, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
 
-    /* Custom Glassmorphism */
-    .glass-nav {
-      background: rgba(7, 7, 8, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-    }
+        .gold-btn {
+            background: linear-gradient(135deg, #deb853 0%, #c4982e 50%, #a4791b 100%);
+            color: #070708;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
-    .gold-btn {
-      background: linear-gradient(135deg, #DEB853 0%, #C4982E 50%, #A4791B 100%);
-      color: #070708;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
+        .gold-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            transition: all 0.6s ease;
+        }
 
-    .gold-btn::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 40%;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: rotate(30deg);
-      transition: all 0.6s ease;
-    }
+        .gold-btn:hover::after {
+            left: 120%;
+        }
 
-    .gold-btn:hover::after {
-      left: 120%;
-    }
-
-    .gold-btn:hover {
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
-      transform: translateY(-2px);
-    }
-  </style>
+        .gold-btn:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body class="bg-black text-slate-300 font-sans selection:bg-brand-gold selection:text-black antialiased overflow-x-hidden">
-
-  <!-- Notification Banner / Toast Message Box -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-500 max-w-md bg-brand-card border border-brand-gold/60 p-4 rounded-xl shadow-gold-glow flex items-start gap-3">
-    <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold flex-shrink-0 mt-0.5">
-      <i class="fa-solid fa-check"></i>
-    </div>
-    <div>
-      <h4 class="text-sm font-semibold text-white tracking-wide" id="toastTitle">Inquiry Received</h4>
-      <p class="text-xs text-slate-400 mt-1 leading-relaxed" id="toastMessage">Thank you for connecting with MRK Ventures. Our executive team will reach out shortly.</p>
-    </div>
-    <button onclick="dismissToast()" class="text-slate-500 hover:text-white ml-2 text-sm focus:outline-none">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
-
-  <!-- NAVIGATION BAR -->
-  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300" id="mainHeader">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo Branding (Linking back to Main MRK Ventures Index) -->
-      <a href="index.html" class="flex items-center gap-3.5 group">
-        <div class="h-10 sm:h-12 flex items-center transition-transform duration-300 group-hover:scale-105">
-          <img src="MRK.jpeg" alt="MRK Ventures" class="h-full w-auto mix-blend-screen object-contain" />
+    <!-- Notification Banner / Toast Message Box -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-500 max-w-md bg-brand-card border border-brand-gold/60 p-4 rounded-xl shadow-gold-glow flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-check"></i>
         </div>
-        <span class="hidden sm:block text-brand-gold font-serif text-sm tracking-[0.2em] border-l border-brand-gold/30 pl-3.5 ml-1">ACADEMY</span>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider">
-        <a href="#it-training" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">IT Mastery</a>
-        <a href="#science-coaching" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">Pre-University Science</a>
-        <a href="#locations" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">Centers of Excellence</a>
-      </nav>
-
-      <!-- Action Button -->
-      <div class="hidden sm:flex items-center gap-4">
-        <a href="index.html" class="text-xs font-serif uppercase tracking-widest text-slate-400 hover:text-brand-gold transition-colors duration-200">
-          Back to MRK Main
-        </a>
-        <a href="#enroll" class="gold-btn px-6 py-2.5 rounded-full text-xs font-serif uppercase tracking-widest inline-flex items-center gap-2">
-          <span>Apply Now</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button id="mobileMenuBtn" aria-label="Toggle menu" class="md:hidden text-slate-300 hover:text-brand-gold focus:outline-none p-2">
-        <i class="fa-solid fa-bars-staggered text-xl" id="menuIcon"></i>
-      </button>
-
+        <div>
+            <h4 class="text-sm font-semibold text-white tracking-wide" id="toastTitle">Inquiry Received</h4>
+            <p class="text-xs text-slate-400 mt-1 leading-relaxed" id="toastMessage">Thank you for connecting with MRK Ventures. Our executive team will reach out shortly.</p>
+        </div>
+        <button onclick="dismissToast()" aria-label="Close Notification" class="text-slate-500 hover:text-white ml-2 text-sm focus:outline-none">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
     </div>
 
-    <!-- Mobile Nav Menu -->
-    <div id="mobileMenu" class="md:hidden hidden bg-brand-surface/95 border-b border-brand-border px-6 py-6 transition-all duration-300">
-      <div class="flex flex-col space-y-4 text-sm uppercase tracking-widest font-serif">
-        <a href="#it-training" class="mobile-link text-slate-300 hover:text-brand-gold py-1">IT Mastery Curriculum</a>
-        <a href="#science-coaching" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Pre-University Science</a>
-        <a href="#locations" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Centers of Excellence</a>
-        <a href="index.html" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Back to MRK Main</a>
-        <a href="#enroll" class="mobile-link text-brand-gold font-bold py-1">Apply to Academy</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden bg-black">
-    
-    <!-- Ambient Gold Radial Glows -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-gold/5 rounded-full blur-[150px] pointer-events-none"></div>
-
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-      
-      <!-- Division Badge -->
-      <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-brand-gold/30 bg-brand-surface/80 backdrop-blur-md">
-        <i class="fa-solid fa-graduation-cap text-brand-gold"></i>
-        <span class="text-xs font-serif uppercase tracking-[0.25em] text-brand-gold">MRK Executive Academy</span>
-      </div>
-
-      <!-- Main Headline -->
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl leading-[1.15] mb-6">
-        Architecting <span class="text-gold-gradient">Elite Capabilities</span> & Pure Science Mastery.
-      </h1>
-
-      <!-- Description Subtitle -->
-      <p class="text-slate-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
-        Elite Executive Education, rigorous Business & IT skill mastery, and advanced pre-university coaching (11th & 12th Standard)—delivering specialized cognitive frameworks engineered for ambitious high-performers.
-      </p>
-
-      <!-- Dual Call to Action -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-        <a href="#it-training" class="w-full sm:w-auto gold-btn px-8 py-3.5 rounded-full font-serif text-xs uppercase tracking-[0.2em] shadow-gold-glow flex items-center justify-center gap-3">
-          <span>Explore IT Curriculums</span>
-          <i class="fa-solid fa-arrow-down-long text-xs"></i>
-        </a>
-        <a href="#science-coaching" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-serif text-xs uppercase tracking-[0.2em] text-slate-300 border border-slate-700 hover:border-brand-gold hover:text-brand-gold-light transition-all duration-300 bg-brand-card/40 backdrop-blur-md flex items-center justify-center gap-3">
-          <span>Pre-University Tracks</span>
-          <i class="fa-solid fa-atom text-xs"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROFESSIONAL IT TRAINING -->
-  <section id="it-training" class="py-28 relative bg-brand-surface border-y border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Executive Education</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-5">
-          Professional <span class="text-gold-gradient">IT Mastery</span>
-        </h2>
-        <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-6"></div>
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          Targeted, accelerated learning for professionals seeking enterprise-grade skills and modern architecture mastery. We transform technical ability into decisive market advantage.
-        </p>
-      </div>
-
-      <!-- Curriculum Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-network-wired"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">ERP & CRM</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Enterprise solutions mastery deep-diving into the SAP and Salesforce ecosystems.</p>
-        </div>
-
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-cloud"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Cloud Architecture</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Mastering infrastructure and deployment strategies across AWS, Azure, GCP, and OCI platforms.</p>
-        </div>
-
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-robot"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">AI & Machine Learning</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Focus on Deep Learning and Generative AI utilizing Python, OpenAI, Gemini, Claude, and DeepSeek.</p>
-        </div>
-
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-database"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Data Science & DBs</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Advanced data architecture training with SQL, PostgreSQL, NoSQL, MongoDB, and Snowflake.</p>
-        </div>
-
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-code-branch"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">DevOps</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Hands-on experience building robust continuous integration, continuous delivery, and automation pipelines.</p>
-        </div>
-
-        <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-file-code"></i>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Full-Stack Development</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Modern web architecture focusing on Python, Advanced JavaScript, Node.js, and scaling robust applications.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 11th & 12th STANDARD COACHING -->
-  <section id="science-coaching" class="py-28 relative overflow-hidden bg-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Pre-University Excellence</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-5">
-          11th & 12th Standard <span class="text-gold-gradient">Coaching</span>
-        </h2>
-        <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-6"></div>
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          A comprehensive and rigorous Science Curriculum designed to ensure high academic performance, foundational mastery, and competitive entrance readiness for tomorrow's leaders.
-        </p>
-      </div>
-
-      <!-- Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-atom"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Core Subjects (PCMB)</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Expert foundational and advanced coaching in Physics, Chemistry, Mathematics, and Biology to construct an unshakeable scientific base.</p>
-        </div>
-
-        <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-laptop-code"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Computer Science</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Building early coding fundamentals, advanced logical reasoning capabilities, and modern technological foundations for future tech innovators.</p>
-        </div>
-
-        <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Board Exam Precision</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Rigorous and methodical syllabus coverage ensuring total subject mastery, critical thinking, and the highest echelon of academic performance in board exams.</p>
-        </div>
-
-        <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
-          <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
-            <i class="fa-solid fa-crosshairs"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Competitive Dominance</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Targeted preparatory tracks and psychological conditioning specialized for clearing premier Engineering and Medical entrance examinations.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CENTERS OF EXCELLENCE / LOCATIONS -->
-  <section id="locations" class="py-24 bg-brand-surface relative border-t border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-gradient-to-r from-brand-card via-[#191920] to-brand-card border border-brand-border rounded-3xl p-8 sm:p-14 relative overflow-hidden shadow-2xl">
-        
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="text-center max-w-3xl mx-auto mb-12 relative z-10">
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
-            Centers of <span class="text-gold-gradient">Excellence</span>
-          </h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            State-of-the-art learning environments engineered for deep focus, technical hands-on practice, and collaborative innovation.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-          
-          <div class="p-6 rounded-2xl bg-black border border-brand-border hover:border-brand-gold/40 transition-colors">
-            <h4 class="font-serif text-xl font-bold text-brand-gold mb-3 flex items-center gap-3">
-              <i class="fa-solid fa-location-dot"></i> Newtown Hub
-            </h4>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Strategically located in the heart of the IT corridor. Designed as a premium hub for advanced IT upskilling, corporate training, and high-tech masterclasses.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-black border border-brand-border hover:border-brand-gold/40 transition-colors">
-            <h4 class="font-serif text-xl font-bold text-brand-gold mb-3 flex items-center gap-3">
-              <i class="fa-solid fa-location-dot"></i> North Dum Dum Hub
-            </h4>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Positioned in Nimta/Birati to capture regional talent. Focused on rigorous core science coaching, foundational tech, and professional placements.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="mt-10 text-center relative z-10">
-          <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-brand-border bg-black">
-            <i class="fa-solid fa-building text-brand-gold"></i>
-            <span class="text-xs font-serif uppercase tracking-widest text-slate-300">
-              <strong class="text-brand-gold">Infrastructure:</strong> Smart classrooms, high-speed labs & collaborative spaces.
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INTERACTIVE INQUIRY & CONTACT SECTION -->
-  <section id="enroll" class="py-28 relative bg-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-        
-        <!-- Contact Details & Info -->
-        <div class="lg:col-span-5 flex flex-col justify-between">
-          <div>
-            <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Admissions & Inquiries</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">
-              Begin Your Journey to <span class="text-gold-gradient">Mastery.</span>
-            </h2>
-            <p class="text-slate-400 text-sm leading-relaxed mb-8">
-              Complete the executive inquiry form to apply for our coaching programs or professional IT mastery tracks. Our admissions directors will contact you within 24 hours.
-            </p>
-
-            <div class="space-y-6">
-              
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
-                  <i class="fa-solid fa-envelope"></i>
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Branding (Linking back to Main MRK Ventures Index) -->
+            <a href="index.html" class="flex items-center gap-3.5 group" aria-label="MRK Ventures Main Home">
+                <div class="h-10 sm:h-12 flex items-center transition-transform duration-300 group-hover:scale-105">
+                    <img src="MRK.jpeg" alt="MRK Ventures Logo" class="h-full w-auto mix-blend-screen object-contain" />
                 </div>
-                <div>
-                  <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Direct Inquiries</h4>
-                  <a href="mailto:hello@mrkventures.in" class="text-sm font-medium text-white hover:text-brand-gold transition-colors mt-0.5 block">hello@mrkventures.in</a>
-                </div>
-              </div>
+                <span class="hidden sm:block text-brand-gold font-serif text-sm tracking-[0.2em] border-l border-brand-gold/30 pl-3.5 ml-1">ACADEMY</span>
+            </a>
 
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div>
-                  <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Admissions Desk</h4>
-                  <p class="text-sm font-medium text-white mt-0.5">+91 7439491691 / +91 9831343812</p>
-                </div>
-              </div>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider">
+                <a href="#it-training" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">IT Mastery</a>
+                <a href="#science-coaching" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">Pre-University Science</a>
+                <a href="#locations" class="text-slate-300 hover:text-brand-gold transition-colors duration-200">Centers of Excellence</a>
+            </nav>
 
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                  <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Primary Campus</h4>
-                  <p class="text-sm font-medium text-white mt-0.5">17, Majherhati Rabindra Sarani, Nimta, North Dum Dum, WB, India 700049</p>
-                </div>
-              </div>
-
+            <!-- Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="index.html" class="text-xs font-serif uppercase tracking-widest text-slate-400 hover:text-brand-gold transition-colors duration-200">
+                    Back to MRK Main
+                </a>
+                <a href="#enroll" class="gold-btn px-6 py-2.5 rounded-full text-xs font-serif uppercase tracking-widest inline-flex items-center gap-2">
+                    <span>Apply Now</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
             </div>
-          </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden text-slate-300 hover:text-brand-gold focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered text-xl" id="menuIcon"></i>
+            </button>
         </div>
 
-        <!-- Sleek Contact & Intake Form (Web-to-Lead configuration matching original) -->
-        <div class="lg:col-span-7">
-          <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-brand-border shadow-xl relative">
-            <h3 class="font-serif text-2xl font-bold text-white mb-2">Academy Application</h3>
-            <p class="text-xs text-slate-400 mb-8">Please provide your details below to formally initiate the enrollment process.</p>
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-brand-surface/95 border-b border-brand-border px-6 py-6 transition-all duration-300">
+            <div class="flex flex-col space-y-4 text-sm uppercase tracking-widest font-serif">
+                <a href="#it-training" class="mobile-link text-slate-300 hover:text-brand-gold py-1">IT Mastery Curriculum</a>
+                <a href="#science-coaching" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Pre-University Science</a>
+                <a href="#locations" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Centers of Excellence</a>
+                <a href="index.html" class="mobile-link text-slate-300 hover:text-brand-gold py-1">Back to MRK Main</a>
+                <a href="#enroll" class="mobile-link text-brand-gold font-bold py-1">Apply to Academy</a>
+            </div>
+        </div>
+    </header>
 
-            <form id="enrollForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-6">
-                <input type="hidden" name="oid" value="00Dhk000003GJUn">
-                <input type="hidden" name="retURL" value="https://mrkventures.in/?submitted=true">
-                <input type="hidden" name="lead_source" value="Web-to-Lead Academy Website">
-                <input type="hidden" name="company" id="sf_company" value="Web2Lead Inquiry">
-                <input type="hidden" name="first_name" id="sf_first_name">
-                <input type="hidden" name="last_name" id="sf_last_name">
-                <input type="text" name="_honey" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
-              
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Full Name *</label>
-                  <input type="text" required id="fullName" placeholder="Alexander Sterling" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden bg-black">
+        <!-- Ambient Gold Radial Glows -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-gold/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+                <!-- Division Badge -->
+                <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-brand-gold/30 bg-brand-surface/80 backdrop-blur-md">
+                    <i class="fa-solid fa-graduation-cap text-brand-gold"></i>
+                    <span class="text-xs font-serif uppercase tracking-[0.25em] text-brand-gold">MRK Executive Academy</span>
                 </div>
-                <div>
-                  <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Email Address *</label>
-                  <input type="email" required name="email" id="email" placeholder="sterling@enterprise.com" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-6">
+                    Architecting <span class="text-gold-gradient">Elite Capabilities</span> & Pure Science Mastery.
+                </h1>
+
+                <!-- Description Subtitle -->
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-10 font-normal">
+                    Elite Executive Education, rigorous Business & IT skill mastery, and advanced pre-university coaching (11th & 12th Standard)—delivering specialized cognitive frameworks engineered for ambitious high-performers.
+                </p>
+
+                <!-- Dual Call to Action -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                    <a href="#it-training" class="w-full sm:w-auto gold-btn px-8 py-3.5 rounded-full font-serif text-xs uppercase tracking-[0.2em] shadow-gold-glow flex items-center justify-center gap-3">
+                        <span>Explore IT Curriculums</span>
+                        <i class="fa-solid fa-arrow-down-long text-xs"></i>
+                    </a>
+                    <a href="#science-coaching" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-serif text-xs uppercase tracking-[0.2em] text-slate-300 border border-slate-700 hover:border-brand-gold hover:text-brand-gold-light transition-all duration-300 bg-brand-card/40 backdrop-blur-md flex items-center justify-center gap-3">
+                        <span>Pre-University Tracks</span>
+                        <i class="fa-solid fa-atom text-xs"></i>
+                    </a>
                 </div>
-              </div>
+            </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Phone Number *</label>
-                  <input type="tel" required name="phone" id="phone" placeholder="+91 98765 43210" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+            <!-- Hero Image Integration -->
+            <div class="lg:col-span-5 hidden lg:flex justify-center items-center">
+                <div class="relative w-full aspect-square max-h-[480px] rounded-full flex items-center justify-center filter drop-shadow-[0_0_35px_rgba(215,166,76,0.25)] hover:scale-105 transition-transform duration-700">
+                    <img src="MRK-Academy.jpg" alt="MRK Academy Seal" class="w-full h-full object-contain rounded-full border border-brand-border/40 mix-blend-screen" />
+                    <!-- Orbital Accent -->
+                    <div class="absolute inset-0 rounded-full border border-brand-gold/20 animate-[spin_30s_linear_infinite]"></div>
                 </div>
-                <div>
-                  <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Applicant Profile *</label>
-                  <select id="profile" name="00Nhk00000AGUHQ" required 
-                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors cursor-pointer">
-                    <option value="Student" class="bg-brand-surface">Student / Professional</option>
-                    <option value="Trainer" class="bg-brand-surface">Trainer / Educator</option>
-                    <option value="Institution Tie-Up" class="bg-brand-surface">Institution For Tie-Up</option>
-                    <option value="Business Investor" class="bg-brand-surface">Business Investor</option>
-                    <option value="Administrative Jobseeker" class="bg-brand-surface">Administrative Jobseeker</option>
-                  </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL IT TRAINING -->
+    <section id="it-training" class="py-28 relative bg-brand-surface border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Executive Education</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-5">
+                    Professional <span class="text-gold-gradient">IT Mastery</span>
+                </h2>
+                <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-6"></div>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Targeted, accelerated learning for professionals seeking enterprise-grade skills and modern architecture mastery. We transform technical ability into decisive market advantage.
+                </p>
+            </div>
+
+            <!-- Curriculum Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">ERP & CRM</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Enterprise solutions mastery deep-diving into the SAP and Salesforce ecosystems.</p>
                 </div>
-              </div>
 
-              <div>
-                  <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Area of Interest *</label>
-                  <input type="text" id="interest" required name="00Nhk00000AGo9Z" placeholder="e.g., Cloud Computing, 11th Science"
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
-              </div>
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Cloud Architecture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mastering infrastructure and deployment strategies across AWS, Azure, GCP, and OCI platforms.</p>
+                </div>
 
-              <div>
-                <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Strategic Goals / Details</label>
-                <textarea id="details" name="description" rows="3" placeholder="Briefly describe your objectives or questions for our academic directors..." 
-                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
-              </div>
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">AI & Machine Learning</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Focus on Deep Learning and Generative AI utilizing Python, OpenAI, Gemini, Claude, and DeepSeek.</p>
+                </div>
 
-              <button type="submit" id="btnSubmit" class="w-full gold-btn py-4 rounded-xl font-serif text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3">
-                <span id="submitBtnText">Submit Formal Application</span>
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-              </button>
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Data Science & DBs</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Advanced data architecture training with SQL, PostgreSQL, NoSQL, MongoDB, and Snowflake.</p>
+                </div>
 
-            </form>
-          </div>
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">DevOps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Hands-on experience building robust continuous integration, continuous delivery, and automation pipelines.</p>
+                </div>
+
+                <div class="group relative bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-file-code"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Full-Stack Development</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Modern web architecture focusing on Python, Advanced JavaScript, Node.js, and scaling robust applications.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- 11th & 12th STANDARD COACHING -->
+    <section id="science-coaching" class="py-28 relative overflow-hidden bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Pre-University Excellence</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-5">
+                    11th & 12th Standard <span class="text-gold-gradient">Coaching</span>
+                </h2>
+                <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-6"></div>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    A comprehensive and rigorous Science Curriculum designed to ensure high academic performance, foundational mastery, and competitive entrance readiness for tomorrow's leaders.
+                </p>
+            </div>
 
-    </div>
-  </section>
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Core Subjects (PCMB)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Expert foundational and advanced coaching in Physics, Chemistry, Mathematics, and Biology to construct an unshakeable scientific base.</p>
+                </div>
 
-  <!-- LUXURY FOOTER -->
-  <footer class="bg-[#000000] border-t border-brand-border pt-16 pb-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Top Brand Row -->
-      <div class="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-brand-border/60 gap-8">
-        
-        <!-- Logo Lockup matching the brand image -->
-        <div class="flex flex-col items-center md:items-start text-center md:text-left">
-          <div class="w-48 sm:w-64 h-auto mb-2">
-            <img src="MRK.jpeg" alt="MRK Ventures" class="w-full h-auto mix-blend-screen object-contain" />
-          </div>
-          <span class="text-brand-gold font-serif text-xs tracking-[0.2em] uppercase mt-2">Executive Academy</span>
+                <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Computer Science</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Building early coding fundamentals, advanced logical reasoning capabilities, and modern technological foundations for future tech innovators.</p>
+                </div>
+
+                <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Board Exam Precision</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Rigorous and methodical syllabus coverage ensuring total subject mastery, critical thinking, and the highest echelon of academic performance in board exams.</p>
+                </div>
+
+                <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow">
+                    <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4 group-hover:text-brand-gold-light transition-colors">Competitive Dominance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Targeted preparatory tracks and psychological conditioning specialized for clearing premier Engineering and Medical entrance examinations.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Quick Nav in Footer -->
-        <div class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider text-slate-400 font-medium">
-          <a href="index.html" class="hover:text-brand-gold transition-colors">MRK Main</a>
-          <a href="#it-training" class="hover:text-brand-gold transition-colors">IT Mastery</a>
-          <a href="#science-coaching" class="hover:text-brand-gold transition-colors">Science Coaching</a>
-          <a href="#locations" class="hover:text-brand-gold transition-colors">Campuses</a>
-          <a href="#enroll" class="hover:text-brand-gold transition-colors">Apply</a>
+    <!-- CENTERS OF EXCELLENCE / LOCATIONS -->
+    <section id="locations" class="py-24 bg-brand-surface relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-card via-[#191920] to-brand-card border border-brand-border rounded-3xl p-8 sm:p-14 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-3xl mx-auto mb-12 relative z-10">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+                        Centers of <span class="text-gold-gradient">Excellence</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        State-of-the-art learning environments engineered for deep focus, technical hands-on practice, and collaborative innovation.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                    <div class="p-6 rounded-2xl bg-black border border-brand-border hover:border-brand-gold/40 transition-colors">
+                        <h4 class="font-serif text-xl font-bold text-brand-gold mb-3 flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot"></i> Newtown Hub
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Strategically located in the heart of the IT corridor. Designed as a premium hub for advanced IT upskilling, corporate training, and high-tech masterclasses.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-black border border-brand-border hover:border-brand-gold/40 transition-colors">
+                        <h4 class="font-serif text-xl font-bold text-brand-gold mb-3 flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot"></i> North Dum Dum Hub
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Positioned in Nimta/Birati to capture regional talent. Focused on rigorous core science coaching, foundational tech, and professional placements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center relative z-10">
+                    <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-brand-border bg-black">
+                        <i class="fa-solid fa-building text-brand-gold"></i>
+                        <span class="text-xs font-serif uppercase tracking-widest text-slate-300">
+                            <strong class="text-brand-gold">Infrastructure:</strong> Smart classrooms, high-speed labs & collaborative spaces.
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Social Icons -->
-        <div class="flex items-center gap-4">
-          <a href="" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="Facebook">
-            <i class="fa-brands fa-facebook-f text-xs"></i>
-          </a>
-          <a href="" target="_blank" rel="noopener noreferrer"
-             class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in text-xs"></i>
-          </a>
+    <!-- INTERACTIVE INQUIRY & CONTACT SECTION -->
+    <section id="enroll" class="py-28 relative bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <!-- Contact Details & Info -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">Admissions & Inquiries</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">
+                            Begin Your Journey to <span class="text-gold-gradient">Mastery.</span>
+                        </h2>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            Complete the executive inquiry form to apply for our coaching programs or professional IT mastery tracks. Our admissions directors will contact you within 24 hours.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Direct Inquiries</h4>
+                                    <a href="mailto:hello@mrkventures.in" class="text-sm font-medium text-white hover:text-brand-gold transition-colors mt-0.5 block">hello@mrkventures.in</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Admissions Desk</h4>
+                                    <p class="text-sm font-medium text-white mt-0.5">+91 7439491691 / +91 9831343812</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Primary Campus</h4>
+                                    <p class="text-sm font-medium text-white mt-0.5">
+                                        17, Majherhati Rabindra Sarani, Nimta, North Dum Dum, WB, India 700049
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sleek Contact & Intake Form (Web-to-Lead configuration matching original) -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-brand-border shadow-xl relative">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Academy Application</h3>
+                        <p class="text-xs text-slate-400 mb-8">Please provide your details below to formally initiate the enrollment process.</p>
+
+                        <form id="enrollForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="space-y-6">
+                            <input type="hidden" name="oid" value="00Dhk000003GJUn" />
+                            <input type="hidden" name="retURL" value="https://mrkventures.in/?submitted=true" />
+                            <input type="hidden" name="lead_source" value="Web-to-Lead Academy Website" />
+                            <input type="hidden" name="company" id="sf_company" value="Web2Lead Inquiry" />
+                            <input type="hidden" name="first_name" id="sf_first_name" />
+                            <input type="hidden" name="last_name" id="sf_last_name" />
+                            <input type="text" name="_honey" id="honeypot" style="display: none" tabindex="-1" autocomplete="off" />
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Full Name *</label>
+                                    <input type="text" required id="fullName" placeholder="Alexander Sterling" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Email Address *</label>
+                                    <input type="email" required name="email" id="email" placeholder="student@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g. name@domain.com)" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Mobile Number *</label>
+                                    <input type="tel" required name="phone" id="phone" placeholder="9876543210" maxlength="10" pattern="^[6-9]\d{9}$" title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Applicant Profile *</label>
+                                    <select id="profile" name="00Nhk00000AGUHQ" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors cursor-pointer">
+                                        <option value="Student" class="bg-brand-surface">Student (Class XI-XII)</option>
+                                        <option value="Professional" class="bg-brand-surface">Professional Course Aspirant</option>
+                                        <option value="Student-Trainer" class="bg-brand-surface">Student Coaching Educator</option>
+                                        <option value="Professional-Trainer" class="bg-brand-surface">Professional Course Trainer</option>
+                                        <option value="Institution Tie-Up" class="bg-brand-surface">Institution For Tie-Up</option>
+                                        <option value="Business Investor" class="bg-brand-surface">Business Investor</option>
+                                        <option value="Jobseeker" class="bg-brand-surface">Jobseeker</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Your Area of Interest *</label>
+                                <input type="text" id="interest" required name="00Nhk00000AGo9Z" placeholder="e.g., Cloud Computing, 11th Science" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors" />
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Your Goals/Details</label>
+                                <textarea id="details" name="description" rows="3" placeholder="Briefly describe your objectives or questions for our academic directors..." class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
+                            </div>
+                            <button type="submit" id="btnSubmit" class="w-full gold-btn py-4 rounded-xl font-serif text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3">
+                                <span id="submitBtnText">Submit Formal Application</span>
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- LUXURY FOOTER -->
+    <footer class="bg-[#000000] border-t border-brand-border pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Brand Row -->
+            <div class="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-brand-border/60 gap-8">
+                <!-- Logo Lockup matching the brand image -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="w-48 sm:w-64 h-auto mb-2">
+                        <img src="MRK.jpeg" alt="MRK Ventures Logo" class="w-full h-auto mix-blend-screen object-contain" />
+                    </div>
+                    <span class="text-brand-gold font-serif text-xs tracking-[0.2em] uppercase mt-2">Executive Academy</span>
+                </div>
 
-      <!-- Bottom Copyright & Disclaimers -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
-        <p>&copy; <span id="currentYear"></span> MRK Ventures - Executive Academy. All Rights Reserved.</p>
-        <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-          <span>•</span>
-          <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                <!-- Quick Nav in Footer -->
+                <div class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider text-slate-400 font-medium">
+                    <a href="index.html" class="hover:text-brand-gold transition-colors">MRK Main</a>
+                    <a href="#it-training" class="hover:text-brand-gold transition-colors">IT Mastery</a>
+                    <a href="#science-coaching" class="hover:text-brand-gold transition-colors">Science Coaching</a>
+                    <a href="#locations" class="hover:text-brand-gold transition-colors">Campuses</a>
+                    <a href="#enroll" class="hover:text-brand-gold transition-colors">Apply</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" rel="noopener noreferrer" aria-label="Visit MRK Ventures Facebook"
+                        class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="Facebook">
+                        <i class="fa-brands fa-facebook-f text-xs"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mrkthebrand/" target="_blank" rel="noopener noreferrer" aria-label="Visit MRK Ventures LinkedIn"
+                        class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in text-xs"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mrkventuresig/" target="_blank" rel="noopener noreferrer" aria-label="Visit MRK Ventures Instagram"
+                        class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="Instagram">
+                        <i class="fa-brands fa-instagram text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Disclaimers -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
+                <p>
+                    &copy; <span id="currentYear"></span> MRK Ventures - Executive Academy. All Rights Reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                </div>
+            </div>
         </div>
-      </div>
+    </footer>
 
-    </div>
-  </footer>
+    <!-- SCRIPT LOGIC -->
+    <script>
+        const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const MOBILE_REGEX = /^[6-9]\d{9}$/;
 
-  <!-- SCRIPT LOGIC -->
-  <script>
-    // Set Current Year Dynamically
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Set Current Year Dynamically
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-    // Mobile Menu Toggle
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
 
-    mobileBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        menuIcon.classList.remove('fa-bars-staggered');
-        menuIcon.classList.add('fa-xmark');
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars-staggered');
-      }
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars-staggered');
-      });
-    });
-
-    // Glass Header Scroll Effect
-    const mainHeader = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        mainHeader.classList.add('shadow-2xl', 'bg-brand-black/90');
-      } else {
-        mainHeader.classList.remove('shadow-2xl', 'bg-brand-black/90');
-      }
-    });
-
-    // Toast Notification System
-    const toast = document.getElementById('toastNotification');
-    const toastTitle = document.getElementById('toastTitle');
-    const toastMessage = document.getElementById('toastMessage');
-    let toastTimeout;
-
-    function showToast(title, message) {
-      if (toastTimeout) clearTimeout(toastTimeout);
-      toastTitle.textContent = title;
-      toastMessage.textContent = message;
-      toast.classList.remove('translate-y-32', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-
-      toastTimeout = setTimeout(() => {
-        dismissToast();
-      }, 5000);
-    }
-
-    function dismissToast() {
-      toast.classList.remove('translate-y-0', 'opacity-100');
-      toast.classList.add('translate-y-32', 'opacity-0');
-    }
-
-    // Check if redirected from successful Web-to-Lead submission
-    window.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('submitted') === 'true') {
-            showToast('Application Received', 'Thank you! Your enrollment application has been submitted successfully to our admissions team.');
-            window.history.replaceState({}, document.title, window.location.pathname);
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains("hidden");
+            mobileMenu.classList.toggle("hidden", !isHidden);
+            menuIcon.classList.toggle("fa-bars-staggered", !isHidden);
+            menuIcon.classList.toggle("fa-xmark", isHidden);
+            mobileBtn.setAttribute("aria-expanded", isHidden);
         }
-    });
 
-    // Form Submit Handler for Salesforce Web-to-Lead
-    const enrollForm = document.getElementById('enrollForm');
-    if (enrollForm) {
-        enrollForm.addEventListener('submit', (e) => {
-            const honeypot = document.getElementById('honeypot').value;
-            if (honeypot) {
-                e.preventDefault();
-                return;
-            }
+        mobileBtn.addEventListener("click", toggleMenu);
 
-            const fullName = document.getElementById('fullName').value.trim();
-            if (!fullName) {
-                e.preventDefault();
-                showToast('Error', 'Please enter your full name.');
-                return;
-            }
-
-            // Parse Full Name into first_name and last_name
-            const nameParts = fullName.split(' ');
-            if (nameParts.length > 1) {
-                document.getElementById('sf_first_name').value = nameParts[0];
-                document.getElementById('sf_last_name').value = nameParts.slice(1).join(' ');
-            } else {
-                document.getElementById('sf_first_name').value = '';
-                document.getElementById('sf_last_name').value = nameParts[0];
-            }
-
-            const btnSubmit = document.getElementById('btnSubmit');
-            const submitText = document.getElementById('submitBtnText');
-            submitText.innerHTML = 'Submitting Application...';
-            btnSubmit.disabled = true;
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                if (!mobileMenu.classList.contains("hidden")) {
+                    toggleMenu();
+                }
+            });
         });
-    }
-  </script>
+
+        // Glass Header Scroll Effect
+        const mainHeader = document.getElementById("mainHeader");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 40) {
+                mainHeader.classList.add("shadow-2xl", "bg-brand-black/90");
+            } else {
+                mainHeader.classList.remove("shadow-2xl", "bg-brand-black/90");
+            }
+        });
+
+        // Toast Notification System
+        const toast = document.getElementById("toastNotification");
+        const toastTitle = document.getElementById("toastTitle");
+        const toastMessage = document.getElementById("toastMessage");
+        let toastTimeout;
+
+        function showToast(title, message) {
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTitle.textContent = title;
+            toastMessage.textContent = message;
+            toast.classList.remove("translate-y-32", "opacity-0");
+            toast.classList.add("translate-y-0", "opacity-100");
+
+            toastTimeout = setTimeout(() => {
+                dismissToast();
+            }, 5000);
+        }
+
+        function dismissToast() {
+            toast.classList.remove("translate-y-0", "opacity-100");
+            toast.classList.add("translate-y-32", "opacity-0");
+        }
+
+        // Check if redirected from successful Web-to-Lead submission
+        window.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get("submitted") === "true") {
+                showToast(
+                    "Application Received",
+                    "Thank you! Your enrollment application has been submitted successfully to our admissions team."
+                );
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+
+        // Form Submit Handler for Salesforce Web-to-Lead
+        const enrollForm = document.getElementById("enrollForm");
+        if (enrollForm) {
+            enrollForm.addEventListener("submit", (e) => {
+                const honeypot = document.getElementById("honeypot").value;
+                if (honeypot) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const fullName = document.getElementById("fullName").value.trim();
+                if (!fullName) {
+                    e.preventDefault();
+                    showToast("Error", "Please enter your full name.");
+                    return;
+                }
+
+                // Parse Full Name into first_name and last_name
+                const nameParts = fullName.split(" ");
+                if (nameParts.length > 1) {
+                    document.getElementById("sf_first_name").value = nameParts[0];
+                    document.getElementById("sf_last_name").value = nameParts.slice(1).join(" ");
+                } else {
+                    document.getElementById("sf_first_name").value = "";
+                    document.getElementById("sf_last_name").value = nameParts[0];
+                }
+
+                // Email Validation
+                const emailInput = document.getElementById("email");
+                const emailValue = emailInput ? emailInput.value.trim().toLowerCase() : "";
+                if (!EMAIL_REGEX.test(emailValue)) {
+                    e.preventDefault();
+                    alert("Please enter a valid email address (e.g. name@domain.com).");
+                    emailInput.focus();
+                    return;
+                }
+
+                // Mobile number validation (10 digits, Indian format)
+                const mobileInput = document.getElementById("phone");
+                const mobileValue = mobileInput ? mobileInput.value.trim() : "";
+                if (!MOBILE_REGEX.test(mobileValue)) {
+                    e.preventDefault();
+                    alert("Please enter a valid 10-digit Indian mobile number starting with Carrier 6, 7, 8, or 9.");
+                    mobileInput.focus();
+                    return;
+                }
+
+                const btnSubmit = document.getElementById("btnSubmit");
+                const submitText = document.getElementById("submitBtnText");
+                submitText.innerHTML = "Submitting Application...";
+                btnSubmit.disabled = true;
+            });
+        }
+    </script>
 </body>
 </html>

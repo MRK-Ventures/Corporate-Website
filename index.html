@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MRK Ventures is a premier ecosystem uniting forward momentum, high-trust relational capital, and elite operational knowledge for founders, visionary leaders, and high-growth ventures.">
   <title>MRK Ventures | Momentum • Relationships • Knowledge</title>
 
   <!-- Google Fonts -->
@@ -73,7 +75,9 @@
     }
 
     @keyframes shimmer {
-      to { background-position: 200% center; }
+      to {
+        background-position: 200% center;
+      }
     }
 
     .border-gold-subtle {
@@ -87,7 +91,7 @@
     /* Ambient Subtle Grid */
     .bg-luxury-grid {
       background-size: 40px 40px;
-      background-image: 
+      background-image:
         linear-gradient(to right, rgba(212, 175, 55, 0.035) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
     }
@@ -144,7 +148,7 @@
       <h4 class="text-sm font-semibold text-white tracking-wide" id="toastTitle">Inquiry Received</h4>
       <p class="text-xs text-slate-400 mt-1 leading-relaxed" id="toastMessage">Thank you for connecting with MRK Ventures. Our executive team will reach out shortly.</p>
     </div>
-    <button onclick="dismissToast()" class="text-slate-500 hover:text-white ml-2 text-sm focus:outline-none">
+    <button onclick="dismissToast()" aria-label="Dismiss Notification" class="text-slate-500 hover:text-white ml-2 text-sm focus:outline-none">
       <i class="fa-solid fa-xmark"></i>
     </button>
   </div>
@@ -152,9 +156,9 @@
   <!-- NAVIGATION BAR -->
   <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
+
       <!-- Logo Branding -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
+      <a href="#hero" class="flex items-center gap-3.5 group" aria-label="MRK Ventures Home">
         <div class="h-10 sm:h-12 flex items-center transition-transform duration-300 group-hover:scale-105">
           <img src="MRK.jpeg" alt="MRK Ventures" class="h-full w-auto mix-blend-screen object-contain" />
         </div>
@@ -170,8 +174,9 @@
 
       <!-- Action Button -->
       <div class="hidden sm:flex items-center gap-4">
-        <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" rel="noopener noreferrer" 
-           class="w-9 h-9 rounded-full border border-slate-700/80 hover:border-brand-gold/60 flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all duration-300" title="Visit Facebook Page">
+        <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full border border-slate-700/80 hover:border-brand-gold/60 flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all duration-300"
+          title="Visit Facebook Page" aria-label="Visit MRK Ventures Facebook Page">
           <i class="fa-brands fa-facebook-f text-sm"></i>
         </a>
         <a href="#contact" class="gold-btn px-6 py-2.5 rounded-full text-xs font-serif uppercase tracking-widest inline-flex items-center gap-2">
@@ -181,7 +186,7 @@
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobileMenuBtn" aria-label="Toggle menu" class="md:hidden text-slate-300 hover:text-brand-gold focus:outline-none p-2">
+      <button id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden text-slate-300 hover:text-brand-gold focus:outline-none p-2">
         <i class="fa-solid fa-bars-staggered text-xl" id="menuIcon"></i>
       </button>
 
@@ -199,13 +204,13 @@
       <div class="mt-6 pt-6 border-t border-brand-border flex items-center justify-between">
         <span class="text-xs text-slate-400">Follow Our Journey</span>
         <div class="flex items-center gap-3">
-          <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" class="text-brand-gold text-lg">
+          <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" rel="noopener noreferrer" class="text-brand-gold text-lg" aria-label="Visit Facebook">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://www.linkedin.com/in/mrkthebrand/" class="text-slate-400 hover:text-white text-lg">
+          <a href="https://www.linkedin.com/in/mrkthebrand/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white text-lg" aria-label="Visit LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://www.instagram.com/mrkventuresig/" class="text-slate-400 hover:text-white text-lg">
+          <a href="https://www.instagram.com/mrkventuresig/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white text-lg" aria-label="Visit Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -215,17 +220,13 @@
 
   <!-- HERO SECTION WITH LOGO AND WINGS -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden bg-black">
-    
     <!-- Ambient Gold Radial Glows -->
     <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-gold/5 rounded-full blur-[150px] pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
         <!-- Left side: MRK Logo and Hero Text -->
         <div class="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-          
           <!-- Resized Logo -->
           <div class="w-[240px] sm:w-[320px] md:w-[380px] max-w-full mb-8 filter drop-shadow-[0_8px_30px_rgba(215,166,76,0.32)] transition-transform duration-500 hover:scale-[1.015]">
             <img src="MRK.jpeg" alt="MRK Ventures" class="w-full h-auto mix-blend-screen object-contain" />
@@ -250,9 +251,8 @@
           </div>
         </div>
 
-        <!-- Right side: The Three Wings (Navigating to internal sections) -->
+        <!-- Right side: The Three Wings -->
         <div id="wings" class="lg:col-span-6 flex flex-col gap-5">
-          
           <div class="mb-2 text-center lg:text-left">
             <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">MRK Ventures Corporate Divisions</span>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">Our Three <span class="text-gold-gradient">Distinct Wings</span></h2>
@@ -261,13 +261,13 @@
             </p>
           </div>
 
-          <!-- Wing 1: Academy & Coaching (Clickable anchor to section) -->
+          <!-- Wing 1 -->
           <a href="#wing-academy" class="group bg-brand-card/60 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 flex items-center gap-5 hover:-translate-y-1 hover:shadow-gold-glow block">
             <div class="text-brand-gold text-2xl flex-shrink-0 w-14 h-14 bg-brand-surface rounded-xl flex items-center justify-center border border-brand-gold/30 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all">
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <div class="flex-grow">
-              <h3 class="font-serif text-lg font-bold text-white mb-1 group-hover:text-brand-gold-light transition-colors">MRK Executive Academy &  Coaching</h3>
+              <h3 class="font-serif text-lg font-bold text-white mb-1 group-hover:text-brand-gold-light transition-colors">MRK Executive Academy & Coaching</h3>
               <p class="text-slate-400 text-xs leading-relaxed">Elite Executive Education for Business/IT skill mastery and Institute of Excellence for pre-university coaching (11th & 12th Standard).</p>
             </div>
             <div class="flex-shrink-0 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1">
@@ -275,7 +275,7 @@
             </div>
           </a>
 
-          <!-- Wing 2: Event Management (Clickable anchor to section) -->
+          <!-- Wing 2 -->
           <a href="#wing-events" class="group bg-brand-card/60 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 flex items-center gap-5 hover:-translate-y-1 hover:shadow-gold-glow block">
             <div class="text-brand-gold text-2xl flex-shrink-0 w-14 h-14 bg-brand-surface rounded-xl flex items-center justify-center border border-brand-gold/30 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all">
               <i class="fa-solid fa-microphone-lines"></i>
@@ -289,7 +289,7 @@
             </div>
           </a>
 
-          <!-- Wing 3: Digital MarTech / AdTech Services (Clickable anchor to section) -->
+          <!-- Wing 3 -->
           <a href="#wing-martech" class="group bg-brand-card/60 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-300 flex items-center gap-5 hover:-translate-y-1 hover:shadow-gold-glow block">
             <div class="text-brand-gold text-2xl flex-shrink-0 w-14 h-14 bg-brand-surface rounded-xl flex items-center justify-center border border-brand-gold/30 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all">
               <i class="fa-solid fa-chart-line"></i>
@@ -302,9 +302,7 @@
               <i class="fa-solid fa-arrow-down"></i>
             </div>
           </a>
-
         </div>
-
       </div>
 
       <!-- Quick Metrics Counter Strip -->
@@ -326,16 +324,15 @@
           <span class="text-[11px] uppercase tracking-wider text-slate-400 mt-1">Enduring Impact</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- CORPORATE DIVISIONS / WINGS SECTION (Detailed) -->
+  <!-- CORPORATE DIVISIONS / WINGS SECTION -->
   <section id="divisions" class="py-28 relative bg-brand-surface border-y border-brand-border overflow-hidden">
     <!-- Background Ambient Glow -->
     <div class="absolute top-1/2 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-24">
@@ -355,9 +352,9 @@
             <div class="absolute inset-0 bg-luxury-grid opacity-30"></div>
             <div class="absolute inset-0 bg-gradient-to-br from-transparent to-brand-black/90"></div>
             <div class="w-48 h-48 rounded-full bg-brand-gold/10 absolute blur-3xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
-            
+
             <div class="relative z-10 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-110 transition-transform duration-500 w-56 h-56 sm:w-64 sm:h-64">
-              <img src="MRK-Academy.jpg" alt="MRK Academy" class="w-full h-full object-contain rounded-full" />
+              <img src="MRK-Academy.jpg" alt="MRK Academy" loading="lazy" class="w-full h-full object-contain rounded-full" />
             </div>
 
             <div class="absolute bottom-6 left-8 right-8 border-t border-brand-border/60 pt-4 flex justify-between items-center">
@@ -431,9 +428,9 @@
             <div class="absolute inset-0 bg-luxury-grid opacity-30"></div>
             <div class="absolute inset-0 bg-gradient-to-bl from-transparent to-brand-black/90"></div>
             <div class="w-48 h-48 rounded-full bg-brand-gold/10 absolute blur-3xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
-            
+
             <div class="relative z-10 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-110 transition-transform duration-500 w-56 h-56 sm:w-64 sm:h-64">
-              <img src="MRK Events.jpg" alt="MRK Events" class="w-full h-full object-contain rounded-full" />
+              <img src="MRK Events.jpg" alt="MRK Events" loading="lazy" class="w-full h-full object-contain rounded-full" />
             </div>
 
             <div class="absolute bottom-6 left-8 right-8 border-t border-brand-border/60 pt-4 flex justify-between items-center">
@@ -451,9 +448,9 @@
             <div class="absolute inset-0 bg-luxury-grid opacity-30"></div>
             <div class="absolute inset-0 bg-gradient-to-br from-transparent to-brand-black/90"></div>
             <div class="w-48 h-48 rounded-full bg-brand-gold/10 absolute blur-3xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
-            
+
             <div class="relative z-10 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-110 transition-transform duration-500 w-56 h-56 sm:w-64 sm:h-64">
-              <img src="MRK-MarTech.jpg" alt="MRK MarTech" class="w-full h-full object-contain rounded-full" />
+              <img src="MRK-MarTech.jpg" alt="MRK MarTech" loading="lazy" class="w-full h-full object-contain rounded-full" />
             </div>
 
             <div class="absolute bottom-6 left-8 right-8 border-t border-brand-border/60 pt-4 flex justify-between items-center">
@@ -497,8 +494,6 @@
   <!-- THE THREE PILLARS SECTION -->
   <section id="pillars" class="py-28 relative bg-black border-y border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-20">
         <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold">The Foundation of MRK</span>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-5">
@@ -510,22 +505,16 @@
         </p>
       </div>
 
-      <!-- Pillar Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Pillar 1: Momentum -->
+        <!-- Pillar 1 -->
         <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow flex flex-col justify-between">
-          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">
-            M
-          </div>
+          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">M</div>
           <div>
             <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
               <i class="fa-solid fa-bolt-lightning"></i>
             </div>
             <span class="text-xs font-serif uppercase tracking-widest text-brand-gold">Pillar I</span>
-            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">
-              Momentum
-            </h3>
+            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">Momentum</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
               Velocity paired with relentless strategic execution. Momentum turns conceptual vision into tangible market reality, breaking inertia and ensuring rapid compound growth.
             </p>
@@ -546,19 +535,15 @@
           </ul>
         </div>
 
-        <!-- Pillar 2: Relationships -->
+        <!-- Pillar 2 -->
         <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow flex flex-col justify-between">
-          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">
-            R
-          </div>
+          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">R</div>
           <div>
             <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
               <i class="fa-solid fa-handshake-simple"></i>
             </div>
             <span class="text-xs font-serif uppercase tracking-widest text-brand-gold">Pillar II</span>
-            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">
-              Relationships
-            </h3>
+            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">Relationships</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
               The true currency of enduring leadership. We curate high-trust alliances, strategic coalitions, and synergistic human networks that open doors capital alone cannot buy.
             </p>
@@ -579,19 +564,15 @@
           </ul>
         </div>
 
-        <!-- Pillar 3: Knowledge -->
+        <!-- Pillar 3 -->
         <div class="group relative bg-brand-surface p-8 sm:p-10 rounded-2xl border border-brand-border hover:border-brand-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold-glow flex flex-col justify-between">
-          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">
-            K
-          </div>
+          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity font-serif text-6xl font-extrabold text-brand-gold select-none">K</div>
           <div>
             <div class="w-14 h-14 rounded-xl bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-black transition-all duration-300">
               <i class="fa-solid fa-brain"></i>
             </div>
             <span class="text-xs font-serif uppercase tracking-widest text-brand-gold">Pillar III</span>
-            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">
-              Knowledge
-            </h3>
+            <h3 class="font-serif text-2xl font-bold text-white mt-2 mb-4 group-hover:text-brand-gold-light transition-colors">Knowledge</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
               Uncompromising intelligence and continuous mastery. Deep actionable insights, data-grounded judgment, and visionary perspectives that outmaneuver disruption.
             </p>
@@ -611,9 +592,7 @@
             </li>
           </ul>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -621,25 +600,20 @@
   <section id="quote" class="py-24 relative overflow-hidden bg-black border-y border-brand-border/60">
     <div class="absolute inset-0 bg-gold-radial opacity-30"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      
       <i class="fa-solid fa-quote-left text-brand-gold text-4xl mb-6 block opacity-80"></i>
-      
       <blockquote class="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-medium leading-relaxed tracking-wide mb-8">
         "Momentum is your shield. Relationships are your leverage. Knowledge is your crown. When the three align, impact is inevitable."
       </blockquote>
-
       <div class="flex flex-col items-center justify-center">
         <span class="font-serif text-sm tracking-[0.25em] text-brand-gold uppercase font-bold">MRK Manifesto</span>
         <span class="text-xs text-slate-500 tracking-wider mt-1 uppercase">Excellence Without Compromise</span>
       </div>
-
     </div>
   </section>
 
   <!-- INTERACTIVE INQUIRY & CONTACT SECTION -->
   <section id="contact" class="py-28 relative bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
         <!-- Contact Details & Info -->
@@ -654,7 +628,6 @@
             </p>
 
             <div class="space-y-6">
-              
               <div class="flex items-start gap-4">
                 <div class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold text-base flex-shrink-0">
                   <i class="fa-solid fa-envelope"></i>
@@ -682,25 +655,23 @@
                 <div>
                   <h4 class="text-xs uppercase font-serif tracking-widest text-slate-400">Official Social Media</h4>
                   <div class="flex items-center gap-3 mt-2">
-                    <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" title="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61596273113581" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" aria-label="Visit Facebook" title="Facebook">
                       <i class="fa-brands fa-facebook-f text-xs"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/mrkthebrand/" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/mrkthebrand/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" aria-label="Visit LinkedIn" title="LinkedIn">
                       <i class="fa-brands fa-linkedin-in text-xs"></i>
                     </a>
-                    <a href="https://www.instagram.com/mrkventuresig/" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" title="Instagram">
+                    <a href="https://www.instagram.com/mrkventuresig/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" aria-label="Visit Instagram" title="Instagram">
                       <i class="fa-brands fa-instagram text-xs"></i>
                     </a>
-                    <a href="#contact" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" title="X (Twitter)">
+                    <a href="#contact" class="w-8 h-8 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-300 hover:text-brand-gold transition-all" aria-label="Visit X Twitter" title="X (Twitter)">
                       <i class="fa-brands fa-x-twitter text-xs"></i>
                     </a>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
           <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border mt-8">
             <p class="text-xs text-brand-gold-light italic">
               "Every great alliance starts with a single high-conviction decision."
@@ -708,37 +679,32 @@
           </div>
         </div>
 
-        <!-- Sleek Contact & Intake Form -->
+        <!-- Restored Sleek Contact & Intake Form to complete the 12-column grid layout -->
         <div class="lg:col-span-7">
           <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-brand-border shadow-xl relative">
             <h3 class="font-serif text-2xl font-bold text-white mb-2">Executive Inquiry</h3>
             <p class="text-xs text-slate-400 mb-8">Please provide your details below and our team will connect within 24 hours.</p>
 
             <form id="inquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
-              
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Full Name *</label>
-                  <input type="text" required name="fullName" placeholder="Alexander Sterling" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+                  <input type="text" required name="fullName" placeholder="Alexander Sterling" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
                 </div>
                 <div>
                   <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Email Address *</label>
-                  <input type="email" required name="email" placeholder="sterling@enterprise.com" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+                  <input type="email" required name="email" placeholder="sterling@enterprise.com" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Organization / Title</label>
-                  <input type="text" name="organization" placeholder="Sterling Global / Managing Partner" 
-                         class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
+                  <input type="text" name="organization" placeholder="Sterling Global / Managing Partner" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors">
                 </div>
                 <div>
                   <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Primary Interest *</label>
-                  <select name="interest" required 
-                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors cursor-pointer">
+                  <select name="interest" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors cursor-pointer">
                     <option value="academy" class="bg-brand-surface">Academy & Coaching</option>
                     <option value="events" class="bg-brand-surface">Event Management</option>
                     <option value="martech" class="bg-brand-surface">Digital MarTech / AdTech Services</option>
@@ -750,35 +716,30 @@
 
               <div>
                 <label class="block text-xs uppercase tracking-wider font-medium text-slate-300 mb-2">Your Strategic Vision / Message *</label>
-                <textarea rows="4" required name="message" placeholder="Outline your objectives, current bottleneck, or how MRK can accelerate your momentum..." 
-                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
+                <textarea rows="4" required name="message" placeholder="Outline your objectives, current bottleneck, or how MRK can accelerate your momentum..." class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
               </div>
 
-              <button type="submit" id="submitBtn" class="w-full gold-btn py-4 rounded-xl font-serif text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3">
+              <button type="submit" id="btnSubmit" class="w-full gold-btn py-4 rounded-xl font-serif text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3">
                 <span id="submitBtnText">Submit Formal Inquiry</span>
                 <i class="fa-solid fa-paper-plane text-xs"></i>
               </button>
-
             </form>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- LUXURY FOOTER -->
   <footer class="bg-[#000000] border-t border-brand-border pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <!-- Top Brand Row -->
       <div class="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-brand-border/60 gap-8">
-        
         <!-- Logo Lockup matching the brand image -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left">
           <div class="w-48 sm:w-64 h-auto mb-2">
-            <img src="MRK.jpeg" alt="MRK Ventures" class="w-full h-auto mix-blend-screen object-contain" />
+            <img src="MRK.jpeg" alt="MRK Ventures Logo" class="w-full h-auto mix-blend-screen object-contain" />
           </div>
         </div>
 
@@ -788,24 +749,22 @@
           <a href="#pillars" class="hover:text-brand-gold transition-colors">Pillars</a>
           <a href="#divisions" class="hover:text-brand-gold transition-colors">Our Wings</a>
           <a href="#community" class="hover:text-brand-gold transition-colors">Community</a>
-          <a href="https://www.facebook.com/MRKTheBrand" target="_blank" class="hover:text-brand-gold transition-colors">Facebook</a>
+          <a href="https://www.facebook.com/MRKTheBrand" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors">Facebook</a>
           <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
         </div>
 
         <!-- Social Icons -->
         <div class="flex items-center gap-4">
-          <a href="https://www.facebook.com/MRKTheBrand" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="Facebook">
+          <a href="https://www.facebook.com/MRKTheBrand" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" aria-label="Visit Facebook Page" title="Facebook">
             <i class="fa-brands fa-facebook-f text-xs"></i>
           </a>
-          <a href="https://www.linkedin.com/in/mrkthebrand/" class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/mrkthebrand/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" aria-label="Visit LinkedIn Page" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in text-xs"></i>
           </a>
-          <a href="https://www.instagram.com/mrkventuresig/" class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" title="Instagram">
+          <a href="https://www.instagram.com/mrkventuresig/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-surface border border-brand-border hover:border-brand-gold flex items-center justify-center text-slate-400 hover:text-brand-gold transition-all" aria-label="Visit Instagram Profile" title="Instagram">
             <i class="fa-brands fa-instagram text-xs"></i>
           </a>
         </div>
-
       </div>
 
       <!-- Bottom Copyright & Disclaimers -->
@@ -819,7 +778,6 @@
           <a href="#hero" class="text-brand-gold hover:underline">Back to top &uarr;</a>
         </div>
       </div>
-
     </div>
   </footer>
 
@@ -828,30 +786,27 @@
     // Set Current Year Dynamically
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle logic
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    mobileBtn.addEventListener('click', () => {
+    function toggleMobileMenu() {
       const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        menuIcon.classList.remove('fa-bars-staggered');
-        menuIcon.classList.add('fa-xmark');
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars-staggered');
-      }
-    });
+      mobileMenu.classList.toggle('hidden', !isHidden);
+      menuIcon.classList.toggle('fa-bars-staggered', !isHidden);
+      menuIcon.classList.toggle('fa-xmark', isHidden);
+      mobileBtn.setAttribute('aria-expanded', isHidden);
+    }
+
+    mobileBtn.addEventListener('click', toggleMobileMenu);
 
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars-staggered');
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMobileMenu();
+        }
       });
     });
 
@@ -888,18 +843,17 @@
       toast.classList.add('translate-y-32', 'opacity-0');
     }
 
-    // Form Submission Handling
+    // Form Submission Handling restored for the Inquiry Form
     function handleFormSubmit(e) {
       e.preventDefault();
-      const submitBtn = document.getElementById('submitBtn');
+      const btnSubmit = document.getElementById('btnSubmit');
       const submitBtnText = document.getElementById('submitBtnText');
       
-      // Simulate submission state
-      submitBtn.disabled = true;
+      btnSubmit.disabled = true;
       submitBtnText.textContent = 'Transmitting Inquiry...';
 
       setTimeout(() => {
-        submitBtn.disabled = false;
+        btnSubmit.disabled = false;
         submitBtnText.textContent = 'Submit Formal Inquiry';
         e.target.reset();
         showToast(
@@ -918,13 +872,7 @@
       dummy.select();
       try {
         document.execCommand("copy");
-        const btnText = document.getElementById('copyBtnText');
-        const orig = btnText.textContent;
-        btnText.textContent = 'Link Copied!';
         showToast('Link Copied', 'The official MRK Facebook community link was copied to your clipboard.');
-        setTimeout(() => {
-          btnText.textContent = orig;
-        }, 2500);
       } catch (err) {
         showToast('Direct Link', shareUrl);
       }
